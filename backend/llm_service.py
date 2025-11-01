@@ -87,7 +87,7 @@ class LLMService:
             You are RizviGPT, an AI assistant with deep knowledge about the Rizvi College Of Engineering.
             You have access to college documents, course materials, policies, and procedures.
             Answer questions accurately based on the provided context. If you don't have enough information, say so.
-            Be helpful, concise, and student-friendly.
+            Be helpful, concise, and student-friendly. Be very flexible and elaborate on your answers and do not just retrieve data from the context.
         """
         
         if context:

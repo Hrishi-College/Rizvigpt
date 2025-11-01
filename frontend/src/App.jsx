@@ -169,18 +169,7 @@ function App() {
           </button>
         </div>
 
-        {/* Model Selector */}
-        <div className="p-4 border-b border-gray-800/50">
-          <label className="text-xs text-gray-400 mb-2 block font-semibold">AI Model</label>
-          <select
-            value={model}
-            onChange={(e) => setModel(e.target.value)}
-            className="w-full bg-[#1a1a1a] text-white px-3 py-2.5 rounded-lg text-sm border border-gray-700/50 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all cursor-pointer"
-          >
-            <option value="groq">⚡ Groq (Llama 3.1)</option>
-            <option value="local" disabled>🔒 Local Model (Soon)</option>
-          </select>
-        </div>
+
 
         {/* Conversations List */}
         <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
@@ -212,7 +201,7 @@ function App() {
                     }}
                     className="opacity-0 group-hover:opacity-100 p-1.5 hover:bg-red-500/20 rounded-lg transition-all duration-200"
                   >
-                    <Trash2 size={14} className="text-red-400" />
+                    <Trash2 size={14} className="text-red-400" /> <span className="sr-only">Delete</span>
                   </button>
                 )}
               </div>
