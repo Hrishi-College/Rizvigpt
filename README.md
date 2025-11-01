@@ -1,4 +1,4 @@
-# CollegeGPT Backend Setup Guide
+# RizviGPT Backend Setup Guide
 
 ## Quick Start
 
@@ -9,23 +9,7 @@ cd backend
 pip install -r requirements.txt
 ```
 
-### 2. Setup Environment Variables
-
-Copy `.env.example` to `.env` and add your credentials:
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env`:
-```
-GROQ_API_KEY=your_actual_groq_api_key
-MONGO_URI=mongodb://localhost:27017/collegegpt  # Optional
-```
-
-**Get Groq API Key**: Visit https://console.groq.com/keys
-
-### 3. Add College Documents
+### 2. Add College Documents
 
 Create a `data` folder in the root directory and add PDF documents:
 
@@ -34,7 +18,7 @@ mkdir -p data
 # Copy your college PDFs, syllabus, handbooks, etc. to data/
 ```
 
-### 4. Run the Backend
+### 3. Run the Backend
 
 ```bash
 cd backend
@@ -43,7 +27,7 @@ python app.py
 
 The API will start at `http://localhost:8000`
 
-### 5. Ingest Documents (First Time)
+### 4. Ingest Documents (First Time)
 
 After starting the server, ingest your documents:
 
@@ -106,7 +90,7 @@ curl http://localhost:8000/health
 ## Architecture
 
 ```
-User Query → RAG Search → Context → Groq LLM → Response
+User Query → RAG Search → Context → LLM → Response
                 ↓
          Vector Store (ChromaDB)
                 ↓
